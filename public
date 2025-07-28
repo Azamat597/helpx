@@ -1,0 +1,8 @@
+const ws = new WebSocket("wss://helpx.vercel.app/ws");
+
+ws.onmessage = (event) => {
+  const { userId, reply } = JSON.parse(event.data);
+  if (userId === "6342951618") {
+    alert("Ответ: " + reply);
+  }
+};
